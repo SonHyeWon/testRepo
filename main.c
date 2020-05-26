@@ -28,7 +28,7 @@ typedef struct _snake {
 	CELL	body[MAXLEN];
 	NAVI	dir;
 	int		length;
-	int		score;
+
 } SNAKE;
 
 int main()
