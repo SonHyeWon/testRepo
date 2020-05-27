@@ -6,6 +6,8 @@
 #include <windows.h>		/* for Sleep() and other Windows stuffs */
 #include "screen.h"
 #include "object.h"
+#include "ui.h"
+#include <stdbool.h>
 
 int main()
 {
