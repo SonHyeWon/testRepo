@@ -97,10 +97,7 @@ int main()
 		}
 			
 		/* wrap the snake at screen boundaries */
-		if (snake.body[0].y < 4)      snake.body[0].y = maxy-2;
-		if (snake.body[0].y > maxy-1) snake.body[0].y = 4;
-		if (snake.body[0].x < 0)      snake.body[0].x = maxx-2;
-		if (snake.body[0].x > maxx-1) snake.body[0].x = 0;
+		
 			
 		/* snake eats fruits? */
 		if (snake.body[0].x == fruit.x && snake.body[0].y == fruit.y) {
