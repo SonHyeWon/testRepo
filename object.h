@@ -8,3 +8,7 @@
 typedef struct fruit {
 	int x, y, color;
 } FRUIT;
+
+typedef struct cell {
+	int x, y;
+} CELL;

@@ -7,11 +7,7 @@
 #include "screen.h"
 #include "object.h"
 
-/* -- GAME LOGIC -- */
-typedef struct _cell {
-	int x, y;
-} CELL;
-
+/* -- GAME LOGIC --*/
 typedef enum _navi {
 	up, down, left, right
 } NAVI;
@@ -119,5 +115,4 @@ int main()
 	clrscr();
 
     return 0;
->>>>>>> master
 }
