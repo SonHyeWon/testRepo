@@ -5,37 +5,15 @@
 #include <stdio.h>			/* for sprintf() */
 #include <windows.h>		/* for Sleep() and other Windows stuffs */
 #include "screen.h"
-
-#define	MAXLEN	2000	/* maximum snake length */
-#define	CHEAD	'o'
-#define	CBODY	'o'
-#define	CFRUIT	'#'
-
-/* -- GAME LOGIC -- */
-typedef struct _fruit {
-	int x, y, color;
-} FRUIT;
-
-typedef struct _cell {
-	int x, y;
-} CELL;
-
-typedef enum _navi {
-	up, down, left, right
-} NAVI;
-
-typedef struct _snake {
-	CELL	body[MAXLEN];
-	NAVI	dir;
-	int		length;
-
-} SNAKE;
+#include "object.h"
+#include "ui.h"
+#include <stdbool.h>
 
 int main()
 {
-	SNAKE	snake = {{{0, 4}, {0, 5}}, down, 2, 0};
+	SNAkE	snake = {{{0, 4}, {0, 5}}, down, 2, 0};
 	FRUIT	fruit = {0, 0, 0};
-	int		i, quit = 0, maxx, maxy, maxclr;
+	int		i, quit = 0, maxx, maxy, maxclr, score;
 	char	key, score[32];
 	
 	maxx = getmaxx();
