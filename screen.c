@@ -32,6 +32,20 @@ int getmaxcolor() {
 	return 16;
 }
 
+void createSnake(SCREEN screen, SNAKE* snake)
+{
+	int centerX = ((screen.endPoint.x + screen.startPoint.x) / 2);
+	int centerY = ((screen.endPoint.y + screen.startPoint.y) / 2);
+	CELL center = { centerX, centerY };
+
+	snake->body[0] = center;
+	center.x -= 2;
+	snake->body[1] = center;
+
+	snake->dir = right;
+	snake->length = 2;
+}
+
 void gotoxy(int x, int y) {
     HANDLE hConsoleOutput;
     COORD Cursor_an_Pos = {x, y};

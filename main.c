@@ -11,7 +11,7 @@
 
 int main()
 {
-	SNAKE	snake = {{{0, 4}, {0, 5}}, down, 2, 0};
+	SNAKE	snake;
 	FRUIT	fruit = {0, 0, 0};
 	int		i, quit = 0, maxx, maxy, maxclr, score;
 	char	key, score[32];
@@ -23,6 +23,8 @@ int main()
 	cursor(0);							/* hide the cursor back */
 	srand(time(NULL));					/* initialize random generator */
 	 
+	createSnake(screen, &snake);
+
 	fruit.x = (rand()%maxx) & ~1;		/* force x even and within [0, MAXX-1] */
 	fruit.y = 4+rand()%(maxy-5);		/* y always within [4,MAXY-1] */
 	fruit.color = 1+rand()%(maxclr-1);	/* avoid color 0, since it's black */

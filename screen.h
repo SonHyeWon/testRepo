@@ -16,6 +16,9 @@ int getmaxx();
 /* returns the console screen width in rows */
 int getmaxy();
 
+/*create snake structure*/
+void createSnake(SCREEN screen, SNAKE* snake);
+
 /* returns the total number of color supported */
 int getmaxcolor();
 
