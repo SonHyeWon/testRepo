@@ -8,10 +8,6 @@
 #include "object.h"
 
 /* -- GAME LOGIC --*/
-typedef enum _navi {
-	up, down, left, right
-} NAVI;
-
 typedef struct _snake {
 	CELL	body[MAXLEN];
 	NAVI	dir;

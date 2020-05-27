@@ -12,3 +12,7 @@ typedef struct fruit {
 typedef struct cell {
 	int x, y;
 } CELL;
+
+typedef enum dir { 
+	up, down, left, right
+} DIR;
