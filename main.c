@@ -7,19 +7,11 @@
 #include "screen.h"
 #include "object.h"
 
-/* -- GAME LOGIC --*/
-typedef struct _snake {
-	CELL	body[MAXLEN];
-	NAVI	dir;
-	int		length;
-	int		score;
-} SNAKE;
-
 int main()
 {
 	SNAKE	snake = {{{0, 4}, {0, 5}}, down, 2, 0};
 	FRUIT	fruit = {0, 0, 0};
-	int		i, quit = 0, maxx, maxy, maxclr;
+	int		i, quit = 0, maxx, maxy, maxclr, score;
 	char	key, score[32];
 	
 	maxx = getmaxx();

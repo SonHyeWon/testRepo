@@ -16,3 +16,9 @@ typedef struct cell {
 typedef enum dir { 
 	up, down, left, right
 } DIR;
+
+typedef struct snake {
+	CELL	body[MAXLEN]; 
+	NAVI	dir;
+	int		length;
+} SNAKE;
